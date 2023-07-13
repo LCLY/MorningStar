@@ -17,7 +17,10 @@ export default function LocaleSwitcher() {
     <div className="flex">
       {i18n.locales.map(locale => {
         return (
-          <div className="uppercase mr-1 pr-1 border-r-2 border-solid border-gray-400 last:border-r-0" key={locale}>
+          <div
+            className={`${pathName.includes(locale) ? "font-bold" : ""} uppercase mr-2 pr-2 border-r-2 border-solid border-gray-400 last:border-r-0`}
+            key={locale}
+          >
             <Link href={redirectedPathName(locale)}>{locale}</Link>
           </div>
         );

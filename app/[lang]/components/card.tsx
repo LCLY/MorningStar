@@ -14,7 +14,7 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
   };
 
   return (
-    <div className="max-w-sm w-full lg:flex lg:max-w-full">
+    <div className="w-full lg:flex lg:max-w-full">
       <div
         className="shadow-md blur-6 spread-2 h-48 lg:h-auto lg:w-48 flex-none bg-cover bg-center rounded-t lg:rounded-tr-none lg:rounded-l text-center overflow-hidden"
         style={{
