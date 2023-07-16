@@ -27,7 +27,7 @@ function a11yProps(index: number) {
 
 const Tab = () => {
   const [value, setValue] = useState(0);
-  const [guideValue, setGuideValue] = useState(8);
+  const [guideValue, setGuideValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
