@@ -9,6 +9,7 @@ import QuestionList from "./components/qna";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Eiffel from "public/images/eiffel.png";
+import Tab from "app/[lang]/components/tab";
 
 type FlattenJSON<T> = T extends object ? { [K in keyof T]: FlattenJSON<T[K]> } : string;
 
@@ -41,7 +42,7 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
               <h2>{dictionary.homepage.conquered}</h2>
               <div className="my-2">
                 <button className="border border-blue-500  hover:border-blue-600 hover:text-blue-600 active:border-blue-500 text-blue-500 active:text-blue-500 font-bold py-2 px-20 rounded transition-all hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
-                  Book
+                  Book Now
                 </button>
               </div>
             </div>
@@ -65,6 +66,14 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
+            </div>
+          </div>
+          <div className="mt-20">
+            <Tab />
+            <div className="my-2 w-full flex justify-center">
+              <button className="text-xl lg:text-2xl border border-blue-500  hover:border-blue-600 hover:text-blue-600 active:border-blue-500 text-blue-500 active:text-blue-500 font-bold py-2 px-20 rounded transition-all hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
+                Book Now
+              </button>
             </div>
           </div>
           <div className="mt-20 flex flex-col lg:flex-row items-start">
