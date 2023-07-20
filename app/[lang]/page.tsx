@@ -24,24 +24,24 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
       <Container>
         <div className="lg:mx-10">
           <h1
-            className="text-2xl md:text-4xl font-bold text-gray-900 text-center pb-3"
+            className="pb-3 text-2xl font-bold text-center text-gray-900 md:text-4xl"
             dangerouslySetInnerHTML={{ __html: dictionary.homepage.main_title }}
           ></h1>
-          <h2 className="text-center text-sm md:text-lg text-gray-600">{dictionary.homepage.main_subtitle}</h2>
+          <h2 className="text-sm text-center text-gray-600 md:text-lg">{dictionary.homepage.main_subtitle}</h2>
           <div className="flex justify-center w-full">
-            <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 mt-10 sm:justify-center">
+            <div className="grid w-full mt-10 sm:grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 sm:justify-center">
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
             </div>
           </div>
-          <div className="my-14 text-center text-gray-600">
-            <div className="grid gap-y-2 mb-10 text-xl lg:text-2xl">
+          <div className="text-center text-gray-600 my-14">
+            <div className="grid mb-10 text-xl gap-y-2 lg:text-2xl">
               <h2 dangerouslySetInnerHTML={{ __html: dictionary.homepage.miss_chance }}></h2>
               <h2>{dictionary.homepage.conquered}</h2>
               <div className="my-2">
-                <button className="border border-blue-500  hover:border-blue-600 hover:text-blue-600 active:border-blue-500 text-blue-500 active:text-blue-500 font-bold py-2 px-20 rounded transition-all hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
+                <button className="px-20 py-2 font-bold text-blue-500 transition-all border border-blue-500 rounded hover:border-blue-600 hover:text-blue-600 active:border-blue-500 active:text-blue-500 hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
                   Book Now
                 </button>
               </div>
@@ -61,7 +61,7 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
           </div>
           <ParagraphSection />
           <div className="mt-24">
-            <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 mt-10 sm:justify-center">
+            <div className="grid w-full mt-10 sm:grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 sm:justify-center">
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
               <Card dictionary={dictionary} />
@@ -70,17 +70,17 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
           </div>
           <div className="mt-20">
             <Tab />
-            <div className="my-2 w-full flex justify-center">
-              <button className="text-xl lg:text-2xl border border-blue-500  hover:border-blue-600 hover:text-blue-600 active:border-blue-500 text-blue-500 active:text-blue-500 font-bold py-2 px-20 rounded transition-all hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
+            <div className="flex justify-center w-full my-2">
+              <button className="px-20 py-2 text-xl font-bold text-blue-500 transition-all border border-blue-500 rounded lg:text-2xl hover:border-blue-600 hover:text-blue-600 active:border-blue-500 active:text-blue-500 hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
                 Book Now
               </button>
             </div>
           </div>
-          <div className="mt-20 flex flex-col lg:flex-row items-start">
-            <div className="w-full lg:w-1/2 flex justify-start ">
+          <div className="flex flex-col items-start mt-20 lg:flex-row">
+            <div className="flex justify-start w-full lg:w-1/2 ">
               <div className="lg:mr-16">
                 <h2 className="text-4xl font-bold">General FAQs</h2>
-                <div className="text-md text-gray-700 mt-2">
+                <div className="mt-2 text-gray-700 text-md">
                   Everything you need to know about our Eiffel Tower Paris travel guide. Can&apos;t find an answer?
                   <a
                     className="text-blue-500 hover:text-blue-700"
@@ -110,11 +110,11 @@ const ParagraphSection = () => {
   return (
     <div className="mt-30">
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 text-center pb-2">Why choose Us?</h2>
-        <h3 className="text-md text-gray-600 text-center pb-3">Lorem ipsum dolor sit amet consectetur</h3>
+        <h2 className="pb-2 text-3xl font-bold text-center text-gray-900">Why choose Us?</h2>
+        <h3 className="pb-3 text-center text-gray-600 text-md">Lorem ipsum dolor sit amet consectetur</h3>
       </div>
       <div className="mt-12">
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col items-center lg:flex-row">
           <div className="w-full lg:w-1/2 ">
             <div className="lg:pr-10">
               <img
@@ -126,7 +126,7 @@ const ParagraphSection = () => {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <p className="text-3xl font-bold text-gray-900 pb-2 pt-10 lg:pt-0">Lorem ipsum dolor sit amet</p>
+            <p className="pt-10 pb-2 text-3xl font-bold text-gray-900 lg:pt-0">Lorem ipsum dolor sit amet</p>
             <p className="mt-3">
               Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur
               adipiscing elit pellentesque habitant morbi. Turpis tincidunt id aliquet risus feugiat in. Tempus urna et pharetra pharetra. Molestie at
@@ -141,9 +141,9 @@ const ParagraphSection = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center mt-20">
+        <div className="flex flex-col-reverse items-center mt-20 lg:flex-row">
           <div className="w-full lg:w-1/2">
-            <p className="text-3xl font-bold text-gray-900 pb-2 pt-10 lg:pt-0">Lorem ipsum dolor sit amet</p>
+            <p className="pt-10 pb-2 text-3xl font-bold text-gray-900 lg:pt-0">Lorem ipsum dolor sit amet</p>
             <p className="mt-3">
               Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur
               adipiscing elit pellentesque habitant morbi. Turpis tincidunt id aliquet risus feugiat in. Tempus urna et pharetra pharetra. Molestie at
