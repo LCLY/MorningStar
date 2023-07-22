@@ -16,15 +16,15 @@ const readMoreList: readMore[] = [
   { list: "Professional licensed English-speaking guide" },
 ];
 export default function Card({ dictionary }: { dictionary: DictionaryJSONType }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const handleToggle = () => {
-    setIsOpen(!isOpen);
+    setIsFlipped(!isFlipped);
   };
 
   return (
     <div className="perspective group">
-      <div className={`relative transition-transform duration-1000 transform preserve-3d ${isOpen ? "my-rotate-y-180" : ""}`}>
+      <div className={`relative transition-transform duration-1000 transform preserve-3d ${isFlipped ? "my-rotate-y-180" : ""}`}>
         <div className="absolute w-full lg:flex lg:max-w-full backface-hidden ">
           <div
             className="flex-none h-48 overflow-hidden text-center bg-center bg-cover rounded-t shadow-md blur-6 spread-2 lg:h-auto lg:w-48 lg:rounded-tr-none lg:rounded-l"
@@ -70,7 +70,7 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
 
             <div className="mt-2">
               <span className="text-sm text-blue-600 transition-colors cursor-pointer hover:text-blue-500" onClick={handleToggle}>
-                {isOpen ? "Read Less" : "Read More"}
+                Read More
               </span>
             </div>
 
@@ -85,12 +85,8 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
             </div>
           </div>
         </div>
-        <div
-          className={`w-full h-80 lg:flex lg:max-w-full backface-hidden ${isOpen ? "my-rotate-y-180" : ""}`}
-          style={{ display: "inline-block" }}
-          onClick={handleToggle}
-        >
-          <div className="px-4 py-2 mt-2 text-sm bg-gray-100 h-75 ">
+        <div className="w-full rounded-t shadow-md h-72 lg:flex lg:max-w-full backface-hidden my-rotate-y-180 " style={{ display: "inline-block" }}>
+          <div className="px-4 py-2 mt-2 text-sm h-75 ">
             {readMoreList.map((item: readMore, index: number) => (
               <div key={index} className="flex mb-2">
                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mt-1 mr-2" />
@@ -98,9 +94,9 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
               </div>
             ))}
 
-            <div className="mt-2">
-              <span className="text-sm text-blue-600 transition-colors cursor-pointer hover:text-blue-500">
-                {dictionary.card.read_description} <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3 h-3 mt-1 ml-1 mr-2" />
+            <div className="mt-3">
+              <span className="text-sm text-blue-600 transition-colors cursor-pointer hover:text-blue-500" onClick={handleToggle}>
+                Go back
               </span>
             </div>
           </div>
