@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Eiffel from "public/images/eiffel.png";
 import Tab from "app/[lang]/components/tab";
+import CarouselComponent from "./components/review-carousel";
 
 type FlattenJSON<T> = T extends object ? { [K in keyof T]: FlattenJSON<T[K]> } : string;
 
