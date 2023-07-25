@@ -69,6 +69,7 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
               <Card dictionary={dictionary} />
             </div>
           </div>
+
           <div className="mt-20">
             <Tab />
             <div className="flex justify-center w-full my-2">
@@ -77,6 +78,11 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
               </button>
             </div>
           </div>
+
+          <div className="mt-24">
+            <CarouselComponent />
+          </div>
+
           <div className="flex flex-col items-start mt-20 lg:flex-row">
             <div className="flex justify-start w-full lg:w-1/2 ">
               <div className="lg:mr-16">
@@ -97,6 +103,7 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
                 </div>
               </div>
             </div>
+
             <div className="w-full lg:w-1/2">
               <QuestionList />
             </div>
