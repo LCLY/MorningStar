@@ -17,6 +17,10 @@ import {
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import { SizeMe } from "react-sizeme";
+import Image from "next/image";
+import photo1_1 from "public/images/photo1.1.jpg";
+import { url } from "inspector";
+// import '{photo 1.1.jpg'} from 'app/[lang]/images';
 interface readMore {
   list: string;
 }
@@ -33,7 +37,7 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
   const handleToggle = () => {
     setIsFlipped(!isFlipped);
   };
-
+  const photo1_1Url = "/images/photo1.1.jpg";
   return (
     <div className="perspective group" style={{ height: `${cardHeight}px` }}>
       <div className={`relative transition-transform duration-1000 transform preserve-3d ${isFlipped ? "my-rotate-y-180" : ""}`}>
@@ -47,10 +51,13 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
                   className="flex-none h-48 overflow-hidden text-center bg-center bg-cover rounded-t shadow-md blur-6 spread-2 lg:h-auto lg:w-48 lg:rounded-tr-none lg:rounded-l"
                   style={{
                     backgroundImage:
+                      //  `url(${photo1_1Url})`,
+                      // `url('./images/photo1.1.jpg')`,
                       "url('https://images.pexels.com/photos/3879071/pexels-photo-3879071.jpeg?cs=srgb&dl=pexels-alex-azabache-3879071.jpg&fm=jpg')",
                   }}
                   title="Woman holding a mug"
                 ></div>
+                {/* <Image src={photo1_1} alt="Woman holding a mug" /> */}
                 <div className="flex flex-col justify-between w-full p-4 pb-2 leading-normal bg-white border-b border-l border-r border-gray-300 rounded-b shadow-md blur-6 spread-2 lg:border-l-0 lg:border-t lg:border-gray-300 lg:rounded-b-none lg:rounded-r">
                   <div className="flex items-center justify-between w-full">
                     <p className="flex items-center text-sm text-gray-600">
@@ -105,17 +112,17 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
             );
           }}
         </SizeMe>
-        <div className="w-full rounded-t shadow-md h-72 lg:max-w-full backface-hidden my-rotate-y-180 p-3" style={{ height: `${cardHeight}px` }}>
-          <div className="px-4 flex flex-col items-stretch h-full">
-            <div className="mt-3 text-blue-600 flex gap-2 items-center">
+        <div className="w-full p-3 rounded-t shadow-md h-72 lg:max-w-full backface-hidden my-rotate-y-180" style={{ height: `${cardHeight}px` }}>
+          <div className="flex flex-col items-stretch h-full px-4">
+            <div className="flex items-center gap-2 mt-3 text-blue-600">
               <FontAwesomeIcon icon={faArrowLeft} />
-              <span className=" text-blue-600 transition-colors cursor-pointer hover:text-blue-500" onClick={handleToggle}>
+              <span className="text-blue-600 transition-colors cursor-pointer hover:text-blue-500" onClick={handleToggle}>
                 Go back
               </span>
             </div>
             <Grid alignItems="center" container sx={{ height: "100%" }}>
               <Grid item md={8} sx={{ height: "100%" }}>
-                <div className="py-2 mt-2 text-sm flex flex-col justify-center h-full">
+                <div className="flex flex-col justify-center h-full py-2 mt-2 text-sm">
                   {readMoreList.map((item: readMore, index: number) => (
                     <div key={index} className="flex mb-2">
                       <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mt-1 mr-2" />
@@ -125,7 +132,7 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
                 </div>
               </Grid>
               <Grid item md={4} sx={{ display: "grid", placeItems: "center", borderLeft: "1px solid #c4c4c4" }}>
-                <div className="flex flex-col justify-center items-center gap-2">
+                <div className="flex flex-col items-center justify-center gap-2">
                   <FontAwesomeIcon icon={faTicket} size="3x" style={{ color: "#497adc" }} />
                   <div className="text-2xl font-bold text-gray-700">€109.90</div>
                   <div className="text-sm text-gray-500">Including fees</div>

@@ -18,6 +18,9 @@ const myClass = plugin(function ({ addUtilities }) {
     ".backface-hidden": {
       backfaceVisibility: "hidden",
     },
+    ".custom-line-height": {
+      lineHeight: "1.5",
+    },
   });
 });
 module.exports = {

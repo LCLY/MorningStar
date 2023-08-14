@@ -11,6 +11,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Eiffel from "public/images/eiffel.png";
 import Tab from "app/[lang]/components/tab";
 import CarouselComponent from "./components/review-carousel";
+import Photo10 from "public/images/photo1.10.jpg";
 
 type FlattenJSON<T> = T extends object ? { [K in keyof T]: FlattenJSON<T[K]> } : string;
 
@@ -118,65 +119,69 @@ const ParagraphSection = () => {
   return (
     <div className="mt-30">
       <div>
-        <h2 className="pb-2 text-3xl font-bold text-center text-gray-900">Why choose Us?</h2>
-        <h3 className="pb-3 text-center text-gray-600 text-md">Lorem ipsum dolor sit amet consectetur</h3>
+        <h2 className="pb-2 text-3xl font-bold text-center text-gray-900">Why choose MorningStar Eiffel Tower Tickets and Tours ?</h2>
       </div>
-      <div className="mt-12">
+      <div className="mt-4">
+        <div className="w-full lg:w-1/2">
+          <p className="pt-8 pb-2 text-2xl font-bold text-gray-900 lg:pt-0">Expert Guides</p>
+          <p className="mt-3 text-justify">
+            Accompanied by passionate and knowledgeable guides, you'll gain deep insights into the Eiffel Tower's history, construction, and
+            significance. Their engaging commentary will bring the tower's stories to life, making your experience both educational and entertaining.
+          </p>
+        </div>
+        <div className="w-full lg:w-1/2">
+          <p className="pt-10 pb-2 text-2xl font-bold text-gray-900 lg:pt-0">Skip-the-Line Access</p>
+          <p className="mt-3 text-justify">
+            Bypass the long queues and save precious time with skip-the-line access. This allows you to maximise your visit by spending more time
+            enjoying the sights and less time waiting in line.
+          </p>
+        </div>
         <div className="flex flex-col items-center lg:flex-row">
-          <div className="w-full lg:w-1/2 ">
-            <div className="lg:pr-10">
-              <img
-                width={"100%"}
-                height={"100%"}
-                alt="tower"
-                src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
-            </div>
+          <div className="w-full lg:w-1/2">
+            <p className="pt-8 pb-2 text-2xl font-bold text-gray-900 lg:pt-0">Eiffel Tower Ascent</p>
+            <p className="mt-3 text-justify">
+              Ascend the Eiffel Tower's iconic iron lattice structure with your guide, discovering its hidden treasures along the way. As you make
+              your way up to all levels – 1st level, 2nd level and the summit, the highest observation deck accessible to the public in the European
+              Union, your guide will point out interesting architectural details and share fascinating anecdotes about Gustave Eiffel, the tower's
+              creator.
+            </p>
           </div>
           <div className="w-full lg:w-1/2">
-            <p className="pt-10 pb-2 text-3xl font-bold text-gray-900 lg:pt-0">Lorem ipsum dolor sit amet</p>
-            <p className="mt-3">
-              Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur
-              adipiscing elit pellentesque habitant morbi. Turpis tincidunt id aliquet risus feugiat in. Tempus urna et pharetra pharetra. Molestie at
-              elementum eu facilisis sed odio morbi quis commodo. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Malesuada
-              bibendum arcu vitae elementum curabitur. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Eget magna fermentum iaculis
-              eu non diam phasellus vestibulum lorem.
-            </p>
-            <p className="mt-6">
-              Tincidunt eget nullam non nisi est sitamet. Ac tortor dignissim convallis aenean et tortor at risus viverra. Eu ultrices vitae auctor eu
-              augue ut. Mattis pellentesque id nibh tortor id. Egestas dui id ornare arcu odio. Et ultrices neque ornare aenean euismod elementum nisi
-              quis eleifend. Metus aliquam eleifend mi in nulla posuere. Amet nisl purus in mollis. Aliquet sagittis id consectetur purus.
-            </p>
+            {/* <div className="w-full lg:w-1/2 flex justify-center items-center"> */}
+            <div className="mt-3 lg:pl-10 width:50% height:50%">
+              <Image width="100%" height={300} alt="tower" src={Photo10} />
+            </div>
           </div>
         </div>
         <div className="flex flex-col-reverse items-center mt-20 lg:flex-row">
           <div className="w-full lg:w-1/2">
-            <p className="pt-10 pb-2 text-3xl font-bold text-gray-900 lg:pt-0">Lorem ipsum dolor sit amet</p>
+            <p className="pt-10 pb-2 text-3xl font-bold text-gray-900 lg:pt-0">Panoramic Views from Eiffel tower</p>
             <p className="mt-3">
-              Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur
-              adipiscing elit pellentesque habitant morbi. Turpis tincidunt id aliquet risus feugiat in. Tempus urna et pharetra pharetra. Molestie at
-              elementum eu facilisis sed odio morbi quis commodo. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Malesuada
-              bibendum arcu vitae elementum curabitur. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Eget magna fermentum iaculis
-              eu non diam phasellus vestibulum lorem.
-            </p>
-            <p className="mt-6">
-              Tincidunt eget nullam non nisi est sitamet. Ac tortor dignissim convallis aenean et tortor at risus viverra. Eu ultrices vitae auctor eu
-              augue ut. Mattis pellentesque id nibh tortor id. Egestas dui id ornare arcu odio. Et ultrices neque ornare aenean euismod elementum nisi
-              quis eleifend. Metus aliquam eleifend mi in nulla posuere. Amet nisl purus in mollis. Aliquet sagittis id consectetur purus.
+              Reach the tower's summit and be rewarded with breathtaking panoramic views of Paris. From this vantage point, you'll witness the beauty
+              of the City of Lights, spotting famous landmarks such as the Louvre, Notre-Dame Cathedral, and the River Seine. Capture stunning
+              photographs to cherish as lasting memories. Also, we provide tours at 8pm during summertime, so that you could both soak in the Parisian
+              skyline in daytime and witness the city illuminated by golden hues after sunset.
             </p>
           </div>
 
           <div className="w-full lg:w-1/2 ">
             <div className="lg:pl-10">
-              <img
-                width={"100%"}
-                height={"100%"}
-                alt="museum"
-                src="https://images.pexels.com/photos/14705350/pexels-photo-14705350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              />
+              <Image width="100%" height={300} alt="tower" src={Photo10} />
             </div>
           </div>
         </div>
+        <div className="w-full lg:w-1/2">
+          <p className="pt-10 pb-2 text-2xl font-bold text-gray-900 lg:pt-0">Historical Insights</p>
+          <p className="mt-3 text-justify">
+            Delve into the tower's rich history and learn about its role as an enduring symbol of Paris and French engineering prowess. Discover how
+            it was initially met with controversy but eventually became an icon of the city, attracting millions of visitors each year.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center w-full my-2">
+        <button className="px-20 py-2 text-xl font-bold text-blue-500 transition-all border border-blue-500 rounded lg:text-2xl hover:border-blue-600 hover:text-blue-600 active:border-blue-500 active:text-blue-500 hover:shadow-md hover:blur-6 hover:spread-2 active:shadow-none">
+          Book Now
+        </button>
       </div>
     </div>
   );
