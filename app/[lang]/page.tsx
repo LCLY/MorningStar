@@ -55,9 +55,33 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
                 If you plan to get there An incredible view from the summit......
               </div>
               <div>
-                If the ticket to the summit is sold out, getting up to the second floor is already magic...
+                <p className="text-justify">
+                  Discover the enchantment of Paris as you embark on a captivating journey with our exceptional team. Step into the gateway of this
+                  iconic monument and be prepared to be mesmerized with our knowledgeable, enthusiastic, passionate, and reliable guides. Uncover the
+                  untold tales and hidden wonders of the Eiffel Tower as we weave incredible stories that will leave you spellbound.
+                </p>
                 <br />
-                We will make your journey unforgettable by incredible and hidden theories about Eiffel Tower...
+                <p className="text-justify">
+                  {" "}
+                  Don't miss the opportunity to soar to the summit - book your adventure now. In the event that the summit is fully booked, secure
+                  your tickets for an unforgettable tour of the second floor, a remarkable experience in its own right.
+                </p>
+
+                <br />
+                <p className="text-justify">
+                  Experience the grandeur of the Eiffel Tower, the world's most popular paid-for monument, attracting nearly 7 million visitors
+                  annually, leading to high demand and swift ticket sales. Secure your spot by booking months in advance to ensure an unforgettable
+                  visit to this remarkable landmark.
+                </p>
+
+                <br />
+                <p className="text-justify">
+                  {" "}
+                  Embark on your journey with our team of expert guides who are fluent in six languages, including French, English, Mandarin Chinese,
+                  Spanish, Bahasa Malaysia, and Korean, ensuring a seamless and immersive experience for all. To further enhance your convenience, our
+                  dedicated customer support team is readily available to assist you through various channels such as WhatsApp, WeChat, email,
+                  Instagram, and Facebook.
+                </p>
               </div>
             </div>
           </div>
@@ -147,7 +171,7 @@ const ParagraphSection = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2">
-            {/* <div className="w-full lg:w-1/2 flex justify-center items-center"> */}
+            {/* <div className="flex items-center justify-center w-full lg:w-1/2"> */}
             <div className="mt-3 lg:pl-10 width:50% height:50%">
               <Image width="100%" height={300} alt="tower" src={Photo10} />
             </div>

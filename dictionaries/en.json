@@ -8,10 +8,14 @@
   "card": {
     "available": "Available Wednesday",
     "guided_tour": "Guided Tour",
-    "title": "Eiffel Tower: Small-group Guided Visit of the Summit",
+    "title1": " Eiffel Tower Tickets: Summit (tour included) with optional Seine River Cruise Trip",
+    "title2": "Eiffel Tower Tickets: Second Floor (tour included) with optional Seine River Cruise Trip",
     "duration": "Duration",
+    "tour_guide": "Professional and licensed tour guides",
     "guide": "Live guide in English",
     "group": "Group of max. 10 people",
+    "language": "Available in 4 languages: English, French, Mandarin, Spanish",
+    "priority": "Priority elevator access to the first floor, second floor and summit of the Eiffel Tower",
     "show_more": "Show More",
     "show_less": "Show Less",
     "read_description": "Read Description"

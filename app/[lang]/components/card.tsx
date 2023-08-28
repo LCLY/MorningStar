@@ -25,11 +25,14 @@ interface readMore {
   list: string;
 }
 const readMoreList: readMore[] = [
-  { list: "Priority access to the Eiffel Tower" },
-  { list: "Elevator access to the Summit(top floor)" },
-  { list: "Elevator access to the first and second floor" },
-  { list: "Access to security check shortcuts" },
-  { list: "Professional licensed English-speaking guide" },
+  { list: "Live Guide" },
+  { list: "1st, 2nd floors and summit access by elevator with your Eiffel Tower tickets" },
+  { list: "Priority access to the Eiffel Tower with summit access" },
+  { list: "Presentation (Available in English, Mandarin Chinese, Spanish and French)" },
+  { list: "Unlimited time inside the Eiffel Tower" },
+  { list: "Pick Up & Drop Off" },
+  { list: "Tips" },
+  { list: "Food and Drinks" },
 ];
 export default function Card({ dictionary }: { dictionary: DictionaryJSONType }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -78,17 +81,20 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
                   <div className="mt-1 mb-2">
                     <Chip>{dictionary.card.guided_tour}</Chip>
                   </div>
-                  <div className="mb-2 font-bold text-gray-900 text-md">{dictionary.card.title}</div>
+                  <div className="mb-2 font-bold text-gray-900 text-md">{dictionary.card.title1}</div>
 
                   <div className="text-sm text-gray-600">
                     <div className="flex items-center">
-                      <FontAwesomeIcon icon={faClock} className="w-4 h-4 mr-2" /> {dictionary.card.duration}: 2h
+                      <FontAwesomeIcon icon={faClock} className="w-4 h-4 mr-2" /> {dictionary.card.duration}: 1 - 3 hours (skip-the-line access)
                     </div>
                     <div className="flex items-center">
-                      <FontAwesomeIcon icon={faHeadphones} className="w-4 h-4 mr-2" /> {dictionary.card.guide}
+                      <FontAwesomeIcon icon={faHeadphones} className="w-4 h-4 mr-2" /> {dictionary.card.language}
                     </div>
                     <div className="flex items-center">
-                      <FontAwesomeIcon icon={faPeopleGroup} className="w-4 h-4 mr-2" /> {dictionary.card.group}
+                      <FontAwesomeIcon icon={faPeopleGroup} className="w-4 h-4 mr-2" /> {dictionary.card.tour_guide}
+                    </div>
+                    <div className="flex items-center">
+                      <FontAwesomeIcon icon={faPeopleGroup} className="w-4 h-4 mr-2" /> {dictionary.card.priority}
                     </div>
                   </div>
 
@@ -121,14 +127,28 @@ export default function Card({ dictionary }: { dictionary: DictionaryJSONType })
               </span>
             </div>
             <Grid alignItems="center" container sx={{ height: "100%" }}>
+              <p className="mt-2">
+                This guided tour of the Eiffel Tower offers you an exceptional opportunity to explore this iconic landmark with the expertise of
+                knowledgeable guides. With skip-the-line access, you'll bypass the queues and make the most of your time at this architectural
+                masterpiece. Immerse yourself in the tower's history, admire breathtaking views of Paris, and create unforgettable memories on this
+                unforgettable tour. Book your Eiffel Tower adventure with us today and embark on an experience that will leave you in awe of this
+                timeless symbol of Paris.
+              </p>
+
               <Grid item md={8} sx={{ height: "100%" }}>
-                <div className="flex flex-col justify-center h-full py-2 mt-2 text-sm">
+                <div className="flex flex-col justify-center h-full py-2 text-sm">
                   {readMoreList.map((item: readMore, index: number) => (
                     <div key={index} className="flex mb-2">
                       <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mt-1 mr-2" />
                       <p>{item.list}</p>
                     </div>
                   ))}
+                  {/* {readMoreList.map((item: readMore, index: number) => (
+                    <div key={index} className="flex mb-2">
+                      <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mt-1 mr-2" />
+                      <p>{item.list}</p>
+                    </div>
+                  ))} */}
                 </div>
               </Grid>
               <Grid item md={4} sx={{ display: "grid", placeItems: "center", borderLeft: "1px solid #c4c4c4" }}>
