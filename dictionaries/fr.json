@@ -8,10 +8,14 @@
   "card": {
     "available": "Disponible le mercredi",
     "guided_tour": "Visite guidée",
-    "title": "Tour Eiffel : Visite guidée en petit groupe du sommet",
+    "title1": " Billets de la Tour Eiffel : Sommet (visite incluse) avec option de croisière sur la Seine.",
+    "title2": "Eiffel Tower Tickets: Second Floor (tour included) with optional Seine River Cruise Trip",
     "duration": "Durée",
+    "tour_guide": "Professional and licensed tour guides",
     "guide": "Guide en direct en anglais",
     "group": "Groupe de maximum 10 personnes",
+    "language": "Available in 4 languages: English, French, Mandarin, Spanish",
+    "priority": "Priority elevator access to the first floor, second floor and summit of the Eiffel Tower",
     "show_more": "Voir plus",
     "show_less": "Voir moins",
     "read_description": "Lire La Description"
